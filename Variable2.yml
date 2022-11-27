@@ -1,0 +1,5 @@
+launch_to_orbit: true
+satellites:
+  - sputnik
+  - explorer
+  - satcom
