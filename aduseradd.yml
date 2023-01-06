@@ -1,10 +1,14 @@
-- name: Ensure user bob is created and use custom credentials to create the user
-  community.windows.win_domain_user:
-    name: bob
-    firstname: Bob
-    surname: Smith
-    password: 1234
-    state: present
-    domain_username: srh.intra\adm_baechti1
-    domain_password: N098.Test
-    domain_server: srh.intra
+---
+- hosts: ansible-ad
+  tasks:
+    - name: Ensure user bob is created and use custom credentials to create the user
+      debug:
+      community.windows.win_domain_user:
+        name: bob
+        firstname: Bob
+        surname: Smith
+        password: 1234
+        state: present
+        domain_username: srh.intra\adm_baechti1
+        domain_password: N098.Test
+        domain_server: srh.intra
